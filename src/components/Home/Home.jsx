@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 
+import { userContext } from "../../context/userContext";
+
 class Home extends Component {
+
+  static contextType = userContext
 
   handleSubmit = event => {
     event.preventDefault();
     const name = event.target.name.value
-    
+    console.log(this.context)
+    const {updateUser} = this.context
     // Crear producto
-    console.log(name)
+    updateUser(name)
 }
 
   render() {
