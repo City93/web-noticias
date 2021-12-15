@@ -13,7 +13,7 @@ class Main extends Component {
   
     this.state = {
        newsList: [
-        { header: "La primera noticia", description: "Todo va bien", img: "www.linux.es" , topic:"Buenas noticias"}
+        { header: "Deydre lo vuelve a hacer", description: "Otro increible dibujo de la fantástica Deydre, que delicia", img: "https://cdna.artstation.com/p/assets/images/images/044/215/960/large/deydre-alonso-thumbnails.jpg?1639411098" , topic:"Arte"}
        ]
     }
   }
