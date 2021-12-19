@@ -1,6 +1,15 @@
 import React, { Component } from "react";
+import { Navigate } from 'react-router-dom'
 
 class Form extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       redirect:false
+    }
+  }
+  
   handleSubmit = event => {
     event.preventDefault();
     const header = event.target.header.value // por referencia
@@ -10,8 +19,15 @@ class Form extends Component {
     
     // Crear producto
     this.props.createNew(header,description,img,topic)
+    this.setState({redirect: true})
+
   }
   render() {
+    const { redirect } = this.state;
+
+     if (redirect) {
+       return <Navigate to='/list'/>;
+     }
     return <form onSubmit={this.handleSubmit}>
               <label htmlFor="name">Header:</label><br/>
               <input type="text" id="header" name="header"/><br />
@@ -22,6 +38,7 @@ class Form extends Component {
               <label htmlFor="topic">Topic:</label><br/>
               <input type="text" id="topic" name="topic"/><br/>
               <input type="submit"/>
+
       </form>;
   }
 }

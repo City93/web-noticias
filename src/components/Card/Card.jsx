@@ -13,7 +13,7 @@ render() {
             <h2>{description}</h2><br/>        
             <img src={img} alt={header} className='picture'/>
             <p>{topic}</p>
-            {/* <button onClick={this.props.delete}>Borrar</button> */}
+            <button onClick={this.props.delete}>Borrar</button>
         </div>
     )
 }
