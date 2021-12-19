@@ -1,0 +1,5 @@
+.main{
+    display: grid;
+    justify-content: space-around;
+    background-color: #363647;
+}

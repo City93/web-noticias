@@ -1,0 +1,11 @@
+.nav{
+    display: flex;
+    border: 1px red solid;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
