@@ -1,0 +1,10 @@
+.formArticle{
+    color:black;
+    padding: 50px 100px 100px 100px;
+    height: 40vh;
+    background-color: white;
+    border: 3px black solid;
+    border-radius: 10%;
+    margin-top: 100px;
+    margin-bottom: 100vh;
+}

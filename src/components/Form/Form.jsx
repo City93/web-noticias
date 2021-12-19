@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Navigate } from 'react-router-dom'
+import TextField from '@material-ui/core/TextField';
+import './Form.css'
+import Button from '@material-ui/core/Button'
 
 class Form extends Component {
   constructor(props) {
@@ -28,16 +31,16 @@ class Form extends Component {
      if (redirect) {
        return <Navigate to='/list'/>;
      }
-    return <form onSubmit={this.handleSubmit}>
+    return <form onSubmit={this.handleSubmit} className="formArticle">
               <label htmlFor="name">Header:</label><br/>
-              <input type="text" id="header" name="header"/><br />
+              <TextField label='title' type="text" id="header" name="header"/><br />
               <label htmlFor="description">Description:</label><br/>
-              <textarea type="textarea" id="description" name="description" rows='10'/><br/>
+              <TextField label='description' type='text' id="description" name="description" rows='10'/><br/>
               <label htmlFor="img">Url Foto:</label><br/>
-              <input type="url" id="img" name="img"/><br/>
+              <TextField label='img' type="url" id="img" name="img"/><br/>
               <label htmlFor="topic">Topic:</label><br/>
-              <input type="text" id="topic" name="topic"/><br/>
-              <input type="submit"/>
+              <TextField label='topic' type="text" id="topic" name="topic"/><br/>
+              <Button size="small" color="primary" type='submit'>Enviar noticia</Button>
 
       </form>;
   }

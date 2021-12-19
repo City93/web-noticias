@@ -5,6 +5,7 @@ import Form from "../Form"
 import ListNews from "../ListNews"
 
 import axios from "axios";
+import './Main.css'
 
 
 import {Route, Routes} from 'react-router-dom';
@@ -66,8 +67,8 @@ componentDidMount(){
 }
   
   render() {
-    return <main>
-            <Routes>
+    return <main className="main">
+            <Routes className>
               <Route path="/" element={<Home/>} exact />
               <Route path="/form" element={<Form createNew={this.createNew}/>} />
               <Route path="/list" element={<ListNews newsList={this.state} delete={this.deleteNew} />}/>

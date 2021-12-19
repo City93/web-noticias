@@ -6,7 +6,7 @@ class ListNews extends Component {
     return this.props.newsList.newsList.map((article, i) => <Card info={article} key={i} delete={()=>this.props.delete(i)} key={i}/>)
 }
   render() {
-    return <div>{this.paintArticles()}</div>;
+    return <>{this.paintArticles()}</>;
   }
 }
 
